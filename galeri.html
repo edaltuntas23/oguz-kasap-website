@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr" class="bg-[#fdfbf7]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hakkımızda — Oğuz Kasap Kağıthane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { forest: "#123a27", gold: "#d4af37", charcoal: "#121212", offwhite: "#fdfbf7" },
+            fontFamily: { display: ['"Playfair Display"', "serif"], sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="bg-offwhite text-charcoal antialiased flex flex-col min-h-screen">
+    <div id="headerMount"></div>
+
+    <main class="pt-20 flex-grow">
+      <!-- HEADER BANNER -->
+      <section class="bg-forest text-offwhite py-16 text-center">
+        <span class="text-sm font-semibold uppercase tracking-widest text-gold">Bizim Hikayemiz</span>
+        <h1 class="mt-3 font-display text-4xl font-extrabold sm:text-5xl">Geleneksel Ustalık & Güven</h1>
+      </section>
+
+      <!-- HİKAYE BÖLÜMÜ -->
+      <section class="mx-auto max-w-6xl px-4 py-20 min-h-[75vh] flex items-center">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+          
+          <!-- Metin Alanı -->
+          <div class="reveal space-y-4">
+            <h2 class="font-display text-3xl font-bold text-forest border-b border-gold/30 pb-3">
+              Hakkımızda
+            </h2>
+            <p class="text-neutral-700 leading-relaxed text-base pt-2">
+              Oğuz Kasap, et sektöründe yıllarını lezzete, ustalığa ve kaliteye adamış iki deneyimli ismin güç birliğiyle doğdu.
+            </p>
+            <p class="text-neutral-700 leading-relaxed text-base">
+              Sektörün öncü markalarından Coşkun Kasap’ta edindiği 15 yıllık derin tecrübesiyle etin en kalitelisini seçme ve işleme uzmanlığını tezgahımıza taşıyan <strong class="text-forest font-semibold">Oğuz Akdoğan</strong> ile baba mesleği olan kebapçılık ve kasaplık kültürünün içinde çekirdekten yetişerek etin lezzet sırlarını ustalığına yansıtan <strong class="text-forest font-semibold">Halil Akat</strong>, geleneksel kasaplık anlayışını modern Kağıthane’de yaşatıyor.
+            </p>
+            <p class="text-neutral-700 leading-relaxed text-base">
+              Tezgahlarımızda her gün titizlikle hazırlanan %100 yerli besi ürünlerimizi; hijyen, dürüstlük ve helal kesim ilkelerinden ödün vermeden sunuyoruz. Bizim için kasaplık sadece bir iş değil; sofralarınıza güven, lezzet ve yılların birikimi olan gerçek ustalığı taşıma sorumluluğudur.
+            </p>
+          </div>
+
+          <!-- Ustalar Fotoğraf Alanı -->
+          <div class="reveal">
+            <div class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl">
+              <img 
+                src="images/ustalar.jpg" 
+                alt="Oğuz Akdoğan ve Halil Akat Ustalar" 
+                class="w-full h-[520px] object-cover transition-transform duration-700 hover:scale-105"
+                onerror="this.onerror=null; this.src='images/ustalar.jpeg';"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <div id="footerMount"></div>
+
+    <script src="assets/header.js"></script>
+    <script src="assets/footer.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr" class="bg-[#fdfbf7]">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oğuz Kasap Kağıthane — Güven, Lezzet, Gelenek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: { forest: "#123a27", gold: "#d4af37", charcoal: "#121212", offwhite: "#fdfbf7" },
+fontFamily: { display: ['"Playfair Display"', "serif"], sans: ["Inter", "sans-serif"] },
+},
+},
+};
+</script>
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+.meat-part { transition: all 0.3s ease; cursor: pointer; }
+.meat-part.active {
+fill: rgba(212, 175, 55, 0.65);
+stroke: #d4af37;
+stroke-width: 3;
+filter: drop-shadow(0px 0px 8px rgba(212,175,55,0.8));
+}
+.meat-part:not(.active) {
+fill: rgba(18, 58, 39, 0.03);
+stroke: rgba(18, 58, 39, 0.3);
+stroke-width: 1.5;
+stroke-dasharray: 4,4;
+}
+</style>
+</head>
+<body class="bg-offwhite text-charcoal antialiased">
+<div id="headerMount"></div>
+
+<main>
+<!-- HERO BÖLÜMÜ -->
+<section class="relative min-h-[92vh] flex items-center overflow-hidden bg-[#121212]">
+<img src="images/storefront.jpeg" alt="Oğuz Kasap Kağıthane" class="absolute inset-0 h-full w-full object-cover opacity-35 scale-105 transition-transform duration-1000 ease-out" onerror="this.onerror=null; this.src='images/storefront.webp';" />
+<div class="absolute inset-0 bg-gradient-to-r from-[#121212]/95 via-[#121212]/80 to-[#121212]/40"></div>
+<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+<div class="max-w-2xl text-offwhite">
+<h1 class="mt-6 font-display text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl"><span class="text-gold">Güven</span>, Lezzet, Gelenek</h1>
+<p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-300">%100 yerli besi hayvanlarından, helal kesim ve hijyenik hazırlık ile hazırlanan seçkin et ürünleri. Sofranıza kalite ve helal lezzet taşıyoruz.</p>
+<div class="mt-9 flex flex-wrap gap-4">
+<a href="urunler.html" class="rounded-full bg-gold px-7 py-3.5 font-semibold text-forest shadow-lg hover:scale-105 hover:bg-[#e8cd7a] transition-all duration-300">Ürünleri Keşfet</a>
+<a href="https://wa.me/905364705272" target="_blank" class="rounded-full border border-offwhite/30 px-7 py-3.5 font-semibold text-offwhite backdrop-blur-sm hover:bg-offwhite hover:text-forest transition-all duration-300">Hemen Sipariş Ver</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STATS (30 Yıl Sayacı Aktif) -->
+<section id="statsSection" class="bg-forest text-offwhite py-16">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid gap-8 sm:grid-cols-3">
+<div class="text-center">
+<div class="font-display text-5xl font-extrabold text-gold">%100</div>
+<p class="mt-3 text-sm font-medium tracking-wide text-neutral-200">Yerli Besi Hayvan</p>
+</div>
+<div class="text-center">
+<div class="font-display text-5xl font-extrabold text-gold">
+<span id="counter30" data-target="30">0</span>+
+</div>
+<p class="mt-3 text-sm font-medium tracking-wide text-neutral-200">Yıllık Kasaplık Tecrübe</p>
+</div>
+<div class="text-center">
+<div class="font-display text-5xl font-extrabold text-gold">Helal</div>
+<p class="mt-3 text-sm font-medium tracking-wide text-neutral-200">Taze Kesim &amp; Hijyenik Hazırlık</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KATEGORİLER -->
+<section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+<div class="text-center">
+<span class="text-sm font-semibold uppercase tracking-widest text-gold">Kategoriler</span>
+<h2 class="mt-3 font-display text-3xl font-bold text-forest sm:text-4xl">Tezgahımızdan Seçkiler</h2>
+</div>
+<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<a href="urunler.html" class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"><div class="h-48 overflow-hidden"><img src="images/meats.webp" alt="Dana etleri" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='images/interior.jpeg';" /></div><div class="p-5 text-center"><h3 class="font-display text-xl font-bold text-forest">Dana Ürünleri</h3></div></a>
+<a href="urunler.html" class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"><div class="h-48 overflow-hidden"><img src="images/interior.jpeg" alt="Kuzu etleri" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='images/front.webp';" /></div><div class="p-5 text-center"><h3 class="font-display text-xl font-bold text-forest">Kuzu Ürünleri</h3></div></a>
+<a href="urunler.html" class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"><div class="h-48 overflow-hidden"><img src="images/front.webp" alt="Tavuk ve hindi" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="p-5 text-center"><h3 class="font-display text-xl font-bold text-forest">Tavuk &amp; Hindi</h3></div></a>
+<a href="urunler.html" class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"><div class="h-48 overflow-hidden"><img src="images/storefront.jpeg" alt="Şarküteri ürünleri" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="p-5 text-center"><h3 class="font-display text-xl font-bold text-forest">Şarküteri</h3></div></a>
+</div>
+</section>
+
+<!-- ===================== HASSAS ÖLÇÜLENDİRİLMİŞ ETİN ANATOMİSİ WIDGETI ===================== -->
+<section id="cowWidgetSection" class="relative bg-[#f4efe6] border-y border-[#e2d7c5] min-h-[360vh]">
+<div class="sticky top-20 h-[85vh] flex flex-col justify-center items-center overflow-hidden px-4">
+
+<!-- Başlık Yukarı Çekildi (-mt-8 sm:-mt-12) -->
+<div class="text-center mb-6 -mt-8 sm:-mt-12">
+<h2 class="font-display text-2xl sm:text-3xl font-extrabold text-forest">Dana Sığır Bölümleri</h2>
+</div>
+
+<div class="w-full max-w-5xl grid lg:grid-cols-12 gap-8 items-center">
+<!-- Sol / Görsel ve Birebir Ölçülü SVG Katmanı -->
+<div class="lg:col-span-7 flex justify-center items-center">
+<div class="relative w-full max-w-[500px] aspect-[1000/588] flex items-center justify-center">
+<!-- Düzenlediğin Dananın Görseli -->
+<img
+src="images/bull-clean.jpg"
+alt="Yerli Besi Dana"
+class="w-full h-full object-contain filter drop-shadow-md z-0"
+onerror="this.onerror=null; this.src='images/bull.jpg'; if(!this.complete||this.naturalWidth===0){this.src='images/bull-clean.png';}"
+/>
+
+<!-- Görselin Kendi Boyut Koordinatlarında Birebir Anatomik Katman -->
+<svg viewBox="0 0 1000 588" class="absolute inset-0 w-full h-full z-10">
+<!-- 1. BOYUN -->
+<path id="part-1" class="meat-part" d="M 150 97.1 L 166.7 90.2 L 183.3 79.3 L 200 72.1 L 216.7 73 L 233.3 98 L 250 97 L 266.7 92 L 283.3 89.1 L 300 87.8 L 300 364.1 L 283.3 352.7 L 266.7 335.6 L 250 314.8 L 233.3 298.5 L 216.7 284.1 L 200 276.7 L 183.3 271.8 L 166.7 265.5 L 150 256.1 Z" />
+<!-- 2. KÜREK -->
+<path id="part-2" class="meat-part" d="M 300 87.8 L 322.9 89.9 L 345.7 98.5 L 368.6 104 L 391.4 105.1 L 414.3 108.3 L 437.1 112.1 L 460 115.4 L 460 300 L 300 300 Z" />
+<!-- 3. DÖŞ (PİRZOLA) -->
+<path id="part-3" class="meat-part" d="M 460 115.4 L 482.9 117.6 L 505.7 118.7 L 528.6 119.8 L 551.4 121.3 L 574.3 123.5 L 597.1 120.9 L 620 117.6 L 620 300 L 460 300 Z" />
+<!-- 4. GÖĞÜS -->
+<path id="part-4" class="meat-part" d="M 300 300 L 463 300 L 463 363.5 L 456.5 455 L 450 455 L 443.4 455 L 436.9 455 L 430.4 455 L 423.9 455 L 417.4 455 L 410.8 432 L 404.3 423.4 L 397.8 389.1 L 391.3 415.5 L 384.8 455 L 378.2 455 L 371.7 455 L 365.2 455 L 358.7 455 L 352.2 455 L 345.6 455 L 339.1 455 L 332.6 394.6 L 326.1 392.4 L 319.6 387.3 L 313 379 L 306.5 370.2 L 300 364 Z" />
+<!-- 5. KARIN (YAN) -->
+<path id="part-5" class="meat-part" d="M 460 300 L 725 300 L 725 338.4 L 695.6 357.2 L 666.1 371.5 L 636.7 392.5 L 607.2 382.2 L 577.8 374.4 L 548.3 369.3 L 518.9 364.2 L 489.4 360.5 L 460 391.6 Z" />
+<!-- 6. SIRT (BONFİLE / ANTRİKOT) -->
+<path id="part-6" class="meat-part" d="M 620 117.6 L 642 114.3 L 664 112.1 L 686 112.1 L 708 111 L 730 109.7 L 730 300 L 620 300 Z" />
+<!-- 7. BUT -->
+<path id="part-7" class="meat-part" d="M 730 109.7 L 749.3 108.4 L 768.6 107.3 L 787.9 107.3 L 807.1 105.1 L 826.4 106.2 L 845.7 111.8 L 865 125.1 L 865 300 L 730 300 Z" />
+<!-- 8. İNCİK -->
+<path id="part-8" class="meat-part" d="M 725 300 L 865 300 L 865 454.6 L 859.8 485 L 854.6 485 L 849.4 485 L 844.3 485 L 839.1 485 L 833.9 485 L 828.7 485 L 823.5 485 L 818.3 485 L 813.1 485 L 808 461.1 L 802.8 443.5 L 797.6 452.7 L 792.4 466.7 L 787.2 483.4 L 782 485 L 776.9 485 L 771.7 485 L 766.5 485 L 761.3 485 L 756.1 485 L 750.9 485 L 745.7 485 L 740.6 485 L 735.4 485 L 730.2 485 L 725 338.4 Z" />
+</svg>
+
+<!-- Rozet -->
+<div id="badgeNumber" class="absolute -top-2 left-2 z-20 bg-gold text-forest font-bold text-sm w-9 h-9 rounded-full flex items-center justify-center shadow-md border-2 border-forest">
+1
+</div>
+</div>
+</div>
+
+<!-- Sağ: İstediğin Sade & Estetik Kart -->
+<div class="lg:col-span-5">
+<div class="bg-white/95 rounded-2xl p-6 border border-neutral-200/80 shadow-lg space-y-4">
+<div class="flex items-center gap-3 border-b border-neutral-200/60 pb-3">
+<span id="partBadge" class="text-xs font-bold text-gold bg-forest px-2.5 py-1 rounded-full uppercase tracking-wider">1. BÖLÜM</span>
+<h3 id="partTitle" class="font-display text-2xl font-bold text-forest">BOYUN</h3>
+</div>
+
+<div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-gold block">YAPILAN ET ÇEŞİTLERİ</span>
+<p id="partMeats" class="text-base font-bold text-forest mt-0.5">
+Kıyma, Sotelik Et, Harçlık Et
+</p>
+</div>
+
+<div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block">ETİ NİTELİKLERİ &amp; ÖZELLİKLERİ</span>
+<p id="partDesc" class="text-xs text-neutral-600 leading-relaxed mt-1">
+Yağ oranı ve bağ dokusu daha fazladır. Yavaş piştikçe lokum kıvamına gelir, lezzet seviyesi oldukça yüksektir.
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+
+<div id="footerMount"></div>
+
+<script src="assets/header.js"></script>
+<script src="assets/footer.js"></script>
+<script src="assets/main.js"></script>
+<script>
+var meatData = {
+1: { name: "BOYUN", meats: "Kıyma, Sotelik Et, Harçlık Et", desc: "Yağ oranı ve bağ dokusu daha fazladır. Yavaş piştikçe lokum kıvamına gelir." },
+2: { name: "KÜREK", meats: "Kuşbaşı, Rosto, Kıyma", desc: "Lifli yapıya sahiptir. Orta yağlı ve lezzetli bir bölümdür." },
+3: { name: "DÖŞ (PİRZOLA)", meats: "Dana Pirzola, Kıyma, Yemeklik Et", desc: "Kemikli ve yağlıdır. Sulu ve oldukça lezzetli yapısıyla öne çıkar." },
+4: { name: "GÖĞÜS", meats: "Dana Pirzola, Sotelik Et", desc: "Yağlı ve liflidir. Piştikçe yumuşayan zengin bir lezzete sahiptir." },
+5: { name: "KARIN (YAN)", meats: "Köftelik Kıyma, Sote, Tranç", desc: "Yağlı ve lezzetlidir. Sulu tencere yemeklerine harika tat katar." },
+6: { name: "SIRT (BONFİLE / ANTRİKOT)", meats: "Bonfile, Antrikot, Kontrfile", desc: "Etin en yumuşak ve yağsız bölümüdür. Premium kalite ızgaralık ettir." },
+7: { name: "BUT", meats: "Tranç, Kontranuvar, Nuvar", desc: "Yağsız ve kas dokusu yoğundur. Lezzetli ve sağlıklıdır." },
+8: { name: "İNCİK", meats: "Osso Buco, Haşlamalık Et", desc: "Kemikli ve ilikli jelatinli yapısıyla muazzam lezzet ve şifa verir." }
+};
+
+window.addEventListener('scroll', function() {
+var section = document.getElementById('cowWidgetSection');
+if (!section) return;
+
+var rect = section.getBoundingClientRect();
+var sectionHeight = section.offsetHeight - window.innerHeight;
+var scrolled = -rect.top;
+var progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
+var currentStep = Math.min(8, Math.max(1, Math.ceil(progress * 8)));
+
+updateCowWidget(currentStep);
+});
+
+function updateCowWidget(step) {
+var data = meatData[step];
+if (!data) return;
+
+document.querySelectorAll('.meat-part').forEach(function(el, index) {
+if (index + 1 === step) {
+el.classList.add('active');
+} else {
+el.classList.remove('active');
+}
+});
+
+document.getElementById('badgeNumber').textContent = step;
+document.getElementById('partBadge').textContent = step + ". BÖLÜM";
+document.getElementById('partTitle').textContent = data.name;
+document.getElementById('partMeats').textContent = data.meats;
+document.getElementById('partDesc').textContent = data.desc;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+updateCowWidget(1);
+});
+
+// === DİNAMİK 30 YIL SAYAÇ BETİĞİ ===
+document.addEventListener("DOMContentLoaded", function () {
+  const statsSection = document.getElementById('statsSection');
+  const counterElement = document.getElementById('counter30');
+  
+  if (!statsSection || !counterElement) return;
+
+  const target = parseInt(counterElement.getAttribute('data-target')) || 30;
+  const duration = 2000;
+  let hasCounted = false;
+
+  const animateCount = () => {
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      
+      const currentCount = Math.floor(easedProgress * target);
+      counterElement.textContent = currentCount;
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        counterElement.textContent = target;
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasCounted) {
+        animateCount();
+        hasCounted = true;
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(statsSection);
+});
+</script>
+</body>
+</html>

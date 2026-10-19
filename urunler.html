@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr" class="bg-[#fdfbf7]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürünlerimiz — Oğuz Kasap Kağıthane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { forest: "#123a27", gold: "#d4af37", charcoal: "#121212", offwhite: "#fdfbf7" },
+            fontFamily: { display: ['"Playfair Display"', "serif"], sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="bg-offwhite text-charcoal antialiased">
+    <div id="headerMount"></div>
+
+    <main>
+      <!-- BANNER HERO -->
+      <section class="relative bg-forest py-14 text-offwhite border-b border-gold/30 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="images/meats.webp" alt="Taze Etler" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/interior.jpeg';" />
+        </div>
+        <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold border border-gold/40 px-4 py-1.5 rounded-full bg-forest/80">SEÇKİN TEZGAH</span>
+          <h1 class="mt-4 font-display text-4xl font-extrabold sm:text-5xl text-white">Taze Et &amp; Şarküteri Çeşitlerimiz</h1>
+          <p class="mt-3 text-sm text-neutral-300 max-w-xl mx-auto">
+            %100 yerli besi, helal kesim ve hijyenik koşullarda hazırlanan taze et ve şarküteri ürünlerimiz.
+          </p>
+        </div>
+      </section>
+
+      <!-- TAB / KATEGORİ SEÇİMİ -->
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <div class="flex justify-center border-b border-neutral-200">
+          <nav class="flex gap-8">
+            <button id="tabEtBtn" onclick="switchTab('et')" class="pb-4 text-base font-bold text-forest border-b-2 border-gold transition-all">
+              Et Ürünleri
+            </button>
+            <button id="tabSarkuteriBtn" onclick="switchTab('sarkuteri')" class="pb-4 text-base font-medium text-neutral-400 border-b-2 border-transparent hover:text-forest transition-all">
+              Şarküteri &amp; Reçeller
+            </button>
+          </nav>
+        </div>
+      </section>
+
+      <!-- İÇERİK ALANI -->
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
+        
+        <!-- 1. SEKTÖR: ET ÜRÜNLERİ -->
+        <div id="tabEtContent" class="space-y-10 transition-all">
+          
+          <!-- DANA ETİ GRUBU -->
+          <div class="bg-white rounded-3xl border border-neutral-200 shadow-lg overflow-hidden grid lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-4 relative min-h-[240px] lg:min-h-full overflow-hidden">
+              <img src="images/meats.webp" alt="Dana Etleri" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='images/interior.jpeg';" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-transparent flex items-end p-6">
+                <div>
+                  <h2 class="font-display text-3xl font-bold text-white mt-2">Dana Etleri</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 p-6 sm:p-8 bg-[#fdfbf7]">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Kıyma</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">%100 Dana, Çift Çekim Taze Kıyma</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Kuşbaşı</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Yumuşak Sotelik Taze Et</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Antrikot</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Mermerleşmiş Yağ Dokulu Izgaralık</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Bonfile</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Extra Yumuşak Lokum Kıvam</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Tranç</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Yağsız Özel Bifteklik Kesim</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Ciğer</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Günlük Taze Yaprak Ciğer</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Köfte</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Kasap Yapımı Ev Lezzetinde Köfte</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Dana Sucuk</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Özel Baharatlı Kangal Sucuk</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Adana Kebap</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Acılı Hazır Zırh Kıyması</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Urfa Kebap</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Acısız Özel Harçlı Kıyma</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KUZU ETİ GRUBU -->
+          <div class="bg-white rounded-3xl border border-neutral-200 shadow-lg overflow-hidden grid lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-4 relative min-h-[240px] lg:min-h-full overflow-hidden">
+              <img src="images/interior.jpeg" alt="Kuzu Etleri" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='images/storefront.jpeg';" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-transparent flex items-end p-6">
+                <div>
+                  <h2 class="font-display text-3xl font-bold text-white mt-2">Kuzu Etleri</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 p-6 sm:p-8 bg-[#fdfbf7]">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Gerdan</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Çorbalık &amp; Haşlamalık Lezzet</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Kol</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Fırınlık ve Tandırlık Yumuşak Et</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Kuşbaşı</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Sulu Yemeklik ve Sotelik Kuzu</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Pirzola</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Izgaralık Taze Kalem Pirzola</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu But</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Etli Fırınlık &amp; Rosto But</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Beyti</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Özel Sarım Kuzu Pirzola/Beyti</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm sm:col-span-2">
+                  <h3 class="font-bold text-forest text-sm">Kuzu Şiş</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Terbiyeli Çöp Şişlik Kuzu Etleri</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAVUK & HİNDİ ÇEŞİTLERİ -->
+          <div class="bg-white rounded-3xl border border-neutral-200 shadow-lg overflow-hidden grid lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-4 relative min-h-[240px] lg:min-h-full overflow-hidden">
+              <img src="images/front.webp" alt="Tavuk ve Hindi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-transparent flex items-end p-6">
+                <div>
+                  <h2 class="font-display text-3xl font-bold text-white mt-2">Tavuk &amp; Hindi</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 p-6 sm:p-8 bg-[#fdfbf7]">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Bütün Tavuk</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Günlük Taze, Temizlenmiş Bütün Tavuk</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Tavuk But</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Sulu ve Lezzetli Tavuk But</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Tavuk Göğüs</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Yağsız, Yüksek Proteinli Tavuk Göğsü</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Tavuk Baget</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Haşlamalık ve Fırınlık Tavuk Baget</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Tavuk Kanat</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Izgaralık ve Soslamalık Tavuk Kanat</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Hindi Üst But</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Derisiz, Kemiksiz Hindi But Eti</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Hindi Üst But (Kemikli)</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Haşlamalık Kemikli Hindi But</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Hindi Göğüs</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Dilimlenmiş veya Bütün Hindi Göğsü</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm sm:col-span-2">
+                  <h3 class="font-bold text-forest text-sm">Hindi Gerdan</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Çorbalık Hindi Gerdan Eti</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. SEKTÖR: ŞARKÜTERİ, REÇEL, YAĞ VE YUMURTA (YENİLENEN BÖLÜM) -->
+        <div id="tabSarkuteriContent" class="hidden space-y-10">
+          
+          <!-- YÖRESEL REÇEL & TATLI ÇEŞİTLERİ -->
+          <div class="bg-white rounded-3xl border border-neutral-200 shadow-lg overflow-hidden grid lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-4 relative min-h-[240px] lg:min-h-full overflow-hidden">
+              <img src="images/interior.jpeg" alt="Yöresel Reçeller" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='images/storefront.jpeg';" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-transparent flex items-end p-6">
+                <div>
+                  <h2 class="font-display text-3xl font-bold text-white mt-2">Geleneksel Reçeller</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 p-6 sm:p-8 bg-[#fdfbf7]">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Ceviz Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Özel Yöresel Ham Ceviz Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Domates Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Geleneksel Ev Yapımı Domates Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Patlıcan Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Özel Minik Patlıcan Tatlısı Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">İncir Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Taze Tane İncir Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Turunç Kabuğu Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Aromatik Akdeniz Turunç Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Limon Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Ferahlatıcı Taze Limon Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Nar Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Mayhoş Tane Nar Reçeli</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Çilek Tatlısı Reçeli</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Bol Taneli Taze Çilek Reçeli</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOĞAL ZEYTİNYAĞI & YUMURTA GRUBU -->
+          <div class="bg-white rounded-3xl border border-neutral-200 shadow-lg overflow-hidden grid lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-4 relative min-h-[240px] lg:min-h-full overflow-hidden">
+              <img src="images/storefront.jpeg" alt="Zeytinyağı ve Yumurtalar" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-transparent flex items-end p-6">
+                <div>
+                  <h2 class="font-display text-3xl font-bold text-white mt-2">Zeytinyağı &amp; Yumurta</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 p-6 sm:p-8 bg-[#fdfbf7]">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Hakiki Sızma Zeytinyağı</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Soğuk Sıkım Doğal Ege Zeytinyağı</p>
+                </div>
+                <div class="p-3.5 bg-white rounded-xl border border-neutral-200/80 shadow-sm">
+                  <h3 class="font-bold text-forest text-sm">Taze Köy Yumurtası</h3>
+                  <p class="text-xs text-neutral-500 mt-0.5">Günlük Taze Gezen Tavuk Yumurtası</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <div id="footerMount"></div>
+
+    <script src="assets/header.js"></script>
+    <script src="assets/footer.js"></script>
+    <script src="assets/main.js"></script>
+    <script>
+      function switchTab(type) {
+        var etContent = document.getElementById('tabEtContent');
+        var sarkuteriContent = document.getElementById('tabSarkuteriContent');
+        var etBtn = document.getElementById('tabEtBtn');
+        var sarkuteriBtn = document.getElementById('tabSarkuteriBtn');
+
+        if (type === 'et') {
+          etContent.classList.remove('hidden');
+          sarkuteriContent.classList.add('hidden');
+          
+          etBtn.className = "pb-4 text-base font-bold text-forest border-b-2 border-gold transition-all";
+          sarkuteriBtn.className = "pb-4 text-base font-medium text-neutral-400 border-b-2 border-transparent hover:text-forest transition-all";
+        } else {
+          etContent.classList.add('hidden');
+          sarkuteriContent.classList.remove('hidden');
+
+          sarkuteriBtn.className = "pb-4 text-base font-bold text-forest border-b-2 border-gold transition-all";
+          etBtn.className = "pb-4 text-base font-medium text-neutral-400 border-b-2 border-transparent hover:text-forest transition-all";
+        }
+      }
+    </script>
+  </body>
+</html>

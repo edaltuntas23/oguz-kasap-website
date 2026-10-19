@@ -1,0 +1,224 @@
+/* ===== OĞUZ KASAP KAĞITHANE — Shared Styles ===== */
+
+:root {
+  --forest: #123a27;
+  --forest-light: #1c5238;
+  --gold: #d4af37;
+  --gold-soft: #e8cd7a;
+  --charcoal: #121212;
+  --offwhite: #fdfbf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--offwhite);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* ---- Reveal on scroll ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---- Gold underline animation for nav links ---- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background-color: var(--gold);
+  transition: width 0.35s ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ---- Dropdown ---- */
+.dropdown-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+.dropdown:hover .dropdown-panel,
+.dropdown:focus-within .dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ---- Mobile menu ---- */
+.mobile-menu {
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.mobile-menu.open {
+  max-height: 640px;
+  opacity: 1;
+}
+
+/* ---- Hamburger icon ---- */
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 26px;
+  background: var(--offwhite);
+  border-radius: 2px;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+.hamburger span + span {
+  margin-top: 6px;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---- Accordion ---- */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordion-item.open .accordion-body {
+  max-height: 400px;
+}
+.accordion-item.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+.accordion-chevron {
+  transition: transform 0.35s ease;
+}
+
+/* ---- WhatsApp floating button pulse ---- */
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+.wa-float {
+  animation: wa-pulse 2.4s infinite;
+}
+.wa-float:hover {
+  transform: scale(1.08);
+}
+
+/* ---- Tab underline ---- */
+.tab-btn {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ---- Product / infographic cards ---- */
+.info-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.info-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 48px -18px rgba(18, 58, 39, 0.45);
+  border-color: var(--gold);
+}
+
+.product-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -20px rgba(18, 58, 39, 0.4);
+}
+
+/* ---- Gallery zoom ---- */
+.gallery-item img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ---- Lightbox ---- */
+.lightbox {
+  transition: opacity 0.35s ease;
+}
+.lightbox.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.lightbox img {
+  transition: transform 0.4s ease;
+}
+
+/* ---- Fade for hero ---- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-anim {
+  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-anim-1 {
+  animation-delay: 0.15s;
+}
+.hero-anim-2 {
+  animation-delay: 0.35s;
+}
+.hero-anim-3 {
+  animation-delay: 0.55s;
+}
+
+/* ---- Counter stat ---- */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
